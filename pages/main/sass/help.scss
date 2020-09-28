@@ -1,0 +1,98 @@
+.help {
+  padding: 8rem 0 10rem;
+  &__title {
+    max-width: 312px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+    text-align: center;
+    letter-spacing: -0.054rem;
+  }
+  &__ways {
+    @include flex;
+    margin: 0 auto;
+    & .help__list {
+      @include flex($justify-content: space-between);
+      width: 100%;
+    }
+    & .help__list--top {
+      justify-content: center;
+      column-gap: 6rem;
+      margin-bottom: 5.5rem;
+
+      transform: translateX(-10px);
+    }
+    & .help__list--bottom {
+      margin-bottom: 0;
+      max-width: 909px;
+
+      transform: translateX(-13px);
+    }
+  }
+  &__item {
+    position: relative;
+
+    width: 166px;
+    padding-top: 90px;
+
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.15;
+    font-family: $font-g;
+    letter-spacing: 0.12rem;
+    color: $color-dark-l;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 60px;
+      height: 60px;
+
+      background-repeat: no-repeat;
+
+      transform: translateX(-50%);
+    }
+    &--food {
+      transform: translateX(-9px);
+      &::before {
+        background-image: url('../../assets/images/help/icon-pet-food.svg');
+      }
+    }
+
+    &--trans::before {
+      background-image: url('../../assets/images/help/icon-transportation.svg');
+    }
+    &--toy::before {
+      background-image: url('../../assets/images/help/icon-toys.svg');
+    }
+    &--bowl::before {
+      background-image: url('../../assets/images/help/icon-bowls-and-cups.svg');
+    }
+    &--soap {
+      transform: translateX(21px);
+      &::before {
+        background-image: url('../../assets/images/help/icon-shampoos.svg');
+      }
+    }
+    &--vit::before {
+      background-image: url('../../assets/images/help/icon-vitamins.svg');
+    }
+    &--med {
+      transform: translateX(-32px);
+      &::before {
+        background-image: url('../../assets/images/help/icon-medicines.svg');
+      }
+    }
+    &--color {
+      transform: translateX(-26px);
+      &::before {
+        background-image: url('../../assets/images/help/icon-collars-leashes.svg');
+      }
+    }
+    &--area::before {
+      background-image: url('../../assets/images/help/icon-sleeping-area.svg');
+    }
+  }
+}
