@@ -1,0 +1,23 @@
+.about {
+  padding: 8rem 0 10rem;
+  &__wrap {
+    @include flex;
+    column-gap: 120px;
+  }
+  &__img {
+    max-width: 300px;
+  }
+  &__title {
+    max-width: 370px;
+    margin-bottom: 2.4rem;
+  }
+  &__text {
+    margin-bottom: 2.5rem;
+  }
+  &__right {
+    max-width: 430px;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
