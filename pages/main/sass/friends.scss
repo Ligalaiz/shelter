@@ -35,10 +35,16 @@
 
 .slider {
   position: relative;
+
+  &__wrap {
+    @include flex($justify-content: space-between, $wrap: nowrap);
+  }
+
   &__list {
     @include flex;
     column-gap: 90px;
   }
+
   &__item {
     @include flex($direction: column);
     max-width: 270px;
@@ -64,9 +70,11 @@
       cursor: pointer;
     }
   }
+
   &__img {
     margin-bottom: 3rem;
   }
+
   &__name {
     margin-bottom: 2.9rem;
 
@@ -78,27 +86,28 @@
   }
 
   &__btn {
-    position: absolute;
-    top: 50%;
+    position: relative;
 
     width: 52px;
     height: 52px;
     border: 2px solid $color-primary;
     border-radius: 50%;
 
-    transform: translateY(-50%);
     transition: all 0.2s linear;
     &:hover {
       background-color: $color-primary-light;
       border-color: $color-primary-light;
       cursor: pointer;
     }
+
     &--left {
       left: 0;
     }
+
     &--right {
       right: 0;
     }
+
     &::before {
       content: '';
       position: absolute;
@@ -110,6 +119,7 @@
       background-image: url('../../assets/images/friends/Arrow.svg');
       transform: translate(-50%, -50%);
     }
+
     &--right::before {
       transform: translate(-50%, -50%) rotate(180deg);
     }

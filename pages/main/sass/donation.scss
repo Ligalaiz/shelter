@@ -15,17 +15,15 @@
 
   &__title {
     max-width: 300px;
-
     margin-bottom: 2rem;
+
+    line-height: 1.32;
   }
 
   &__subtitle {
-    margin-bottom: 2.1rem;
+    margin-bottom: 2rem;
 
-    font-family: $font-g;
-    line-height: 1.15;
-    letter-spacing: 0.09rem;
-    color: $color-dark-l;
+    @include h5;
   }
   &__tel {
     position: relative;
@@ -36,10 +34,7 @@
     padding: 10px 14px 10px 60px;
     border-radius: 9px;
 
-    font-size: 2rem;
-    font-family: $font-g;
-    line-height: 1.15;
-    letter-spacing: 0.12rem;
+    @include h4;
 
     background-color: $color-primary;
     transition: all 0.2s linear;
@@ -64,9 +59,6 @@
   }
 
   &__text {
-    color: $color-dark-m;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    font-style: italic;
+    @include paragraph-s;
   }
 }

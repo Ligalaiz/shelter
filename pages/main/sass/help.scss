@@ -6,7 +6,6 @@
     margin-bottom: 6rem;
 
     text-align: center;
-    letter-spacing: -0.054rem;
   }
   &__ways {
     @include flex;
@@ -35,12 +34,9 @@
     width: 166px;
     padding-top: 90px;
 
+    @include h4;
     text-align: center;
-    font-size: 2rem;
-    line-height: 1.15;
-    font-family: $font-g;
-    letter-spacing: 0.12rem;
-    color: $color-dark-l;
+
     &::before {
       content: '';
       position: absolute;
