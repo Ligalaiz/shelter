@@ -509,6 +509,16 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    padding: 0 10px;
+  }
+}
 .header {
   padding: 3rem 0 3.1rem;
   background-color: #ffffff;
@@ -544,7 +554,7 @@ body {
   color: #ffffff;
   color: #292929;
 }
-.header .header__list {
+.header__list {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -554,7 +564,7 @@ body {
   width: 100%;
   padding-bottom: 2px;
 }
-.header .header__list li:last-child a {
+.header__list li:last-child a {
   margin-right: 0;
 }
 .header__link {
@@ -633,6 +643,11 @@ body {
   border-color: #fddcc4;
 }
 
+@media (max-width: 320px) {
+  .header__list {
+    display: none;
+  }
+}
 .friends {
   padding: 8rem 0 4rem;
   background-color: #f6f6f6;
@@ -644,7 +659,7 @@ body {
   text-align: center;
 }
 .friends__slider {
-  margin-bottom: 6rem;
+  padding-bottom: 6rem;
 }
 .friends__btn {
   max-width: 260px;
@@ -797,6 +812,48 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .friends {
+    padding: 7rem 0 1.6rem;
+  }
+
+  .friends__title {
+    margin-bottom: 4rem;
+  }
+
+  .slider__list {
+    margin-bottom: 1rem;
+  }
+
+  .slider__item--scarlett,
+.slider__item--freddie {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .friends {
+    padding-top: 4rem;
+  }
+
+  .friends__title {
+    margin-bottom: 5rem;
+    font-size: 1.6em;
+  }
+
+  .slider {
+    padding-bottom: 1.3rem;
+  }
+
+  .slider__list {
+    margin-bottom: 0.1rem;
+  }
+
+  .slider__item--sophia,
+.slider__item--jennifer,
+.slider__item--charly {
+    display: none;
+  }
+}
 .footer {
   padding-top: 4rem;
   background: url("../../assets/images/header/noise_transparent.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
@@ -881,6 +938,37 @@ body {
   width: 22px;
   height: 32px;
   background-image: url("../../assets/images/footer/icon-marker.svg");
+}
+
+@media (max-width: 768px) {
+  .footer__wrapper {
+    align-items: center;
+    justify-content: center;
+    column-gap: 5.6rem;
+  }
+
+  .footer {
+    padding-top: 3rem;
+  }
+
+  .footer__contact,
+.footer__place {
+    padding-top: 0;
+    margin-bottom: 5.1rem;
+  }
+}
+@media (max-width: 320px) {
+  .footer__title {
+    text-align: center;
+  }
+
+  .footer__contact {
+    margin-bottom: 3.1rem;
+  }
+
+  .footer__place {
+    margin-bottom: 8.1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

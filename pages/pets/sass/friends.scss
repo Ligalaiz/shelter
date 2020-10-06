@@ -12,7 +12,7 @@
   }
 
   &__slider {
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 
   &__btn {
@@ -168,4 +168,46 @@
   @include flex($justify-content: space-between);
   max-width: 340px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .friends {
+    padding: 7rem 0 1.6rem;
+    &__title {
+      margin-bottom: 4rem;
+    }
+  }
+  .slider {
+    &__list {
+      margin-bottom: 1rem;
+    }
+
+    &__item--scarlett,
+    &__item--freddie {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .friends {
+    padding-top: 4rem;
+    &__title {
+      margin-bottom: 5rem;
+      font-size: 1.6em;
+    }
+  }
+
+  .slider {
+    padding-bottom: 1.3rem;
+    &__list {
+      margin-bottom: 0.1rem;
+    }
+
+    &__item--sophia,
+    &__item--jennifer,
+    &__item--charly {
+      display: none;
+    }
+  }
 }

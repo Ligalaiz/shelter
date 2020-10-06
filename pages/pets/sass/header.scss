@@ -26,7 +26,7 @@
     color: $color-dark-3xl;
   }
 
-  & .header__list {
+  &__list {
     @include flex($justify-content: space-between, $wrap: nowrap);
     max-width: 443px;
     width: 100%;
@@ -105,5 +105,11 @@
       background-color: $color-primary-light;
       border-color: $color-primary-light;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .header__list {
+    display: none;
   }
 }
