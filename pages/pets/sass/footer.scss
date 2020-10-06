@@ -1,0 +1,96 @@
+.footer {
+  padding-top: 4rem;
+
+  background: url('../../assets/images/header/noise_transparent.png'),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+
+  &__wrapper {
+    @include flex($justify-content: space-between, $align-items: flex-start);
+  }
+  &__contact,
+  &__place {
+    max-width: 280px;
+    padding-top: 2.1rem;
+    padding-bottom: 15px;
+  }
+  &__place {
+    max-width: 301px;
+    & .footer__title {
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__title {
+    margin-bottom: 4.5rem;
+
+    color: $color-light-xl;
+  }
+  &__mail,
+  &__tel {
+    padding-left: 60px;
+  }
+
+  &__mail,
+  &__boston {
+    margin-bottom: 4rem;
+  }
+
+  &__mail {
+    margin-bottom: 5rem;
+  }
+
+  &__boston,
+  &__london {
+    padding-left: 40px;
+  }
+
+  &__mail,
+  &__tel,
+  &__boston,
+  &__london {
+    position: relative;
+
+    display: block;
+
+    font-size: 2rem;
+    font-family: $font-g;
+    line-height: 1.15;
+    letter-spacing: 0.06rem;
+    color: $color-primary;
+    letter-spacing: 0.13rem;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $color-primary-light;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      background-repeat: no-repeat;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__mail::before {
+    width: 40px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-email.svg');
+  }
+  &__tel::before {
+    width: 40px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-phone.svg');
+  }
+  &__boston::before {
+    width: 22px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-marker.svg');
+  }
+  &__london::before {
+    width: 22px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-marker.svg');
+  }
+}
