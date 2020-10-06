@@ -1,5 +1,5 @@
 .friends {
-  padding: 8rem 0 10rem;
+  padding: 8rem 0 4rem;
 
   background-color: $color-light-l;
 
@@ -35,14 +35,21 @@
 
 .slider {
   position: relative;
+
+  &__wrap {
+    @include flex($justify-content: space-between, $wrap: nowrap);
+  }
+
   &__list {
     @include flex;
     column-gap: 4rem;
+    margin-bottom: 3rem;
   }
+
   &__item {
     @include flex($direction: column);
     max-width: 270px;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     border-radius: 9px;
 
     text-align: center;
@@ -57,7 +64,7 @@
   }
 
   &__description {
-    padding: 30px 35px;
+    padding: 0 35px 30px;
   }
 
   &__link {
@@ -68,9 +75,14 @@
       cursor: pointer;
     }
   }
+
   &__img {
     margin-bottom: 3rem;
+    & img {
+      border-radius: 9px 9px 0px 0px;
+    }
   }
+
   &__name {
     margin-bottom: 2.9rem;
 
@@ -90,12 +102,27 @@
     border-radius: 50%;
 
     font-size: 2rem;
+    font-family: $font-g;
 
     transition: all 0.2s linear;
+    outline: none;
+    cursor: pointer;
     &:hover {
       background-color: $color-primary-light;
       border-color: $color-primary-light;
-      cursor: pointer;
+    }
+    &:active {
+      border-color: $color-primary;
+      background-color: $color-primary;
+    }
+    &--number {
+      border-color: $color-primary;
+      background-color: $color-primary;
+      cursor: default;
+      &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
     }
 
     &:disabled {
@@ -111,8 +138,6 @@
     &::before {
       content: '';
       position: absolute;
-      width: 27px;
-      height: 19px;
       top: 50%;
       left: 50%;
 
@@ -141,6 +166,6 @@
 
 .btn__wrap {
   @include flex($justify-content: space-between);
-  max-width: 400px;
+  max-width: 340px;
   margin: 0 auto;
 }

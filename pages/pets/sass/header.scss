@@ -1,10 +1,9 @@
 .header {
-  padding-top: 6rem;
-  padding-bottom: 6px;
-  position: sticky;
-  top: 0;
+  padding: 3rem 0 3.1rem;
+  // position: sticky;
+  // top: 0;
 
-  background-color: #ffffff;
+  background-color: $color-light-xl;
 
   z-index: 100;
 
@@ -15,21 +14,15 @@
   }
   &__nav {
     @include flex($justify-content: space-between, $wrap: nowrap);
-    margin-bottom: 6.1rem;
   }
   &__title {
     margin-bottom: 10px;
 
-    font-size: 3.2rem;
-    font-family: $font-g;
-    line-height: 1.1;
-    letter-spacing: 0.19rem;
+    @include logo_title;
     color: $color-dark-l;
   }
   &__subtitle {
-    font-size: 1.3rem;
-    line-height: 1.15;
-    letter-spacing: 0.13rem;
+    @include logo_subtitle;
     color: $color-dark-3xl;
   }
 
@@ -48,11 +41,12 @@
 
     display: block;
     margin-right: 10px;
+    padding-right: 1px;
 
-    font-size: 1.5rem;
-    line-height: 1.6;
+    @include paragraph-l;
     letter-spacing: 0.004rem;
     color: $color-dark-l;
+
     transition: all 0.2s linear;
     &:hover {
       color: $color-dark-3xl;
@@ -64,10 +58,12 @@
       left: 0;
       width: 100%;
       height: 2.7px;
-      visibility: hidden;
+
       background-color: $color-primary;
+
       transition: all 0.2s linear;
       transform: scaleX(0);
+      visibility: hidden;
     }
     &--active {
       color: $color-dark-3xl;
@@ -90,14 +86,13 @@
     max-width: 310px;
     margin-bottom: 4.2rem;
 
-    font-size: 4.4rem;
-    font-family: $font-g;
-    line-height: 1.3;
+    @include h2;
     color: $color-light-xl;
   }
   &__text {
     margin-bottom: 4rem;
 
+    @include paragraph-l;
     color: $color-dark-s;
   }
   &__btn {

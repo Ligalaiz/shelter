@@ -48,7 +48,6 @@
   &__item {
     @include flex($direction: column);
     max-width: 270px;
-    padding: 30px 35px;
     border-radius: 9px;
 
     text-align: center;
@@ -62,6 +61,10 @@
     }
   }
 
+  &__description {
+    padding: 0 35px 30px;
+  }
+
   &__link {
     transition: all 0.2s linear;
     &:hover {
@@ -73,6 +76,9 @@
 
   &__img {
     margin-bottom: 3rem;
+    & img {
+      border-radius: 9px 9px 0px 0px;
+    }
   }
 
   &__name {
