@@ -98,3 +98,40 @@
     background-image: url('../../assets/images/footer/icon-marker.svg');
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 3rem;
+    &__wrapper {
+      align-items: center;
+      justify-content: center;
+      column-gap: 6rem;
+    }
+
+    &__contact,
+    &__place {
+      padding-top: 0;
+      margin-bottom: 5.5rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    &__title {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    &__contact {
+      margin-bottom: 3.1rem;
+    }
+
+    &__place {
+      margin-bottom: 8.1rem;
+    }
+    &__img {
+      max-width: 260px;
+    }
+  }
+}

@@ -41,7 +41,7 @@
               <p class="header__title">Cozy House</p>
               <p class="header__subtitle">Shelter for pets in Boston</p>
             </div>
-            <ul class="header__list">
+            <ul class="header__list" id="nav">
               <li class="header__item">
                 <a class="header__link header__link--active" href="#"
                   >About the shelter</a
@@ -57,6 +57,9 @@
                 <a class="header__link" href="#">Contacts</a>
               </li>
             </ul>
+            <div class="header__burger burger" id="burger">
+              <div class="burger__item"></div>
+            </div>
           </nav>
           <div class="header__promo promo">
             <div class="promo__left">
@@ -124,7 +127,7 @@
               <div class="slider__wrap">
                 <div class="slider__btn slider__btn--left"></div>
                 <ul class="slider__list">
-                  <li class="slider__item">
+                  <li class="slider__item slider__item--katrine">
                     <div class="slider__img">
                       <img
                         src="../../assets/images/friends/1.png"
@@ -136,7 +139,7 @@
                       <a class="slider__link btn" href="#">Learn more</a>
                     </div>
                   </li>
-                  <li class="slider__item">
+                  <li class="slider__item slider__item--jennifer">
                     <div class="slider__img">
                       <img
                         src="../../assets/images/friends/2.png"
@@ -148,7 +151,7 @@
                       <a href="#" class="slider__link btn">Learn more</a>
                     </div>
                   </li>
-                  <li class="slider__item">
+                  <li class="slider__item slider__item--woody">
                     <div class="slider__img">
                       <img
                         src="../../assets/images/friends/3.png"
@@ -171,14 +174,12 @@
           <div class="container">
             <h3 class="help__title title">How you can&nbsp;help our shelter</h3>
             <div class="help__ways">
-              <ul class="help__list help__list--top">
+              <ul class="help__list">
                 <li class="help__item help__item--food">Pet food</li>
                 <li class="help__item help__item--trans">Transportation</li>
                 <li class="help__item help__item--toy">Toys</li>
                 <li class="help__item help__item--bowl">Bowls and cups</li>
                 <li class="help__item help__item--soap">Shampoos</li>
-              </ul>
-              <ul class="help__list help__list--bottom">
                 <li class="help__item help__item--vit">Vitamins</li>
                 <li class="help__item help__item--med">Medicines</li>
                 <li class="help__item help__item--color">Collars / leashes</li>
@@ -257,6 +258,7 @@
         </div>
       </footer>
     </div>
+    <div class="overlay" id="overlay"></div>
     <script src="./js/main.js"></script>
   </body>
 </html>

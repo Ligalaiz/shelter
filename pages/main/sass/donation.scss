@@ -62,3 +62,61 @@
     @include paragraph-s;
   }
 }
+
+@media (max-width: 768px) {
+  .donation {
+    padding-bottom: 10rem;
+    &__subtitle {
+      margin-bottom: 1.9rem;
+    }
+    &__left {
+      margin-right: 0;
+
+      order: 1;
+    }
+    &__right {
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .donation {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+
+    &__right {
+      margin-bottom: 4.2rem;
+    }
+
+    &__img {
+      max-width: 262px;
+    }
+
+    &__title {
+      margin-bottom: 2.2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2.4rem;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    &__tel {
+      max-width: 282px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      padding-top: 13px;
+      padding-bottom: 13px;
+
+      font-size: 1.5rem;
+      letter-spacing: 0.09rem;
+    }
+    &__text {
+      padding: 0 10px;
+
+      text-align: justify;
+    }
+  }
+}

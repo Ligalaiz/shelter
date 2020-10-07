@@ -435,7 +435,6 @@ ul {
 
 ul[class],
 ol[class] {
-  padding: 0;
   list-style: none;
 }
 
@@ -520,12 +519,15 @@ body {
   }
 }
 .header {
-  padding: 3rem 0 3.1rem;
+  padding: 2.8rem 0 3.1rem;
+  position: sticky;
+  top: 0;
   background-color: #ffffff;
   z-index: 100;
 }
 .header__logo {
   max-width: 187px;
+  padding-top: 2px;
   text-align: center;
 }
 .header__nav {
@@ -643,9 +645,116 @@ body {
   border-color: #fddcc4;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
+  .overlay--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+  }
+
+  .header__burger {
+    position: absolute;
+    display: block;
+    top: 5rem;
+    right: 5rem;
+  }
+
+  .burger {
+    width: 30px;
+    height: 22px;
+    transition: all 0.4s linear;
+    z-index: 110;
+  }
+  .burger__item {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    box-shadow: 0 9.1px 0 #000, 0 -9.1px 0 #000;
+    transition: all 0.8s linear;
+    transform: translateY(-50%);
+  }
+
+  .burger--active {
+    transform: rotate(90deg);
+    top: 5rem;
+    right: 5rem;
+    transition: all 0.4s linear;
+  }
+
+  .burger--active .burger__item {
+    background-color: #cdcdcd;
+    box-shadow: 0 9.1px 0 #cdcdcd, 0 -9.1px 0 #cdcdcd;
+    transition: all 0.8s linear;
+  }
+  .burger--active .burger__item:hover {
+    background-color: #fafafa;
+    box-shadow: 0 9.1px 0 #fafafa, 0 -9.1px 0 #fafafa;
+  }
+
   .header__list {
+    position: fixed;
+    top: 0;
+    right: 0;
     display: none;
+    width: 278px;
+    min-width: 300px;
+    padding: 200px 10px 100px 70px;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    background: url("../../assets/images/header/noise_transparent.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  }
+
+  .header__link {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #cdcdcd;
+  }
+  .header__link:hover {
+    color: #fafafa;
+  }
+  .header__link--active {
+    color: #fafafa;
+  }
+
+  .nav-show {
+    animation: menu-show 0.6s linear;
+  }
+
+  @keyframes menu-show {
+    from {
+      transform: translateX(278px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .nav-close {
+    animation: menu-close 0.6s linear;
+  }
+
+  @keyframes menu-close {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(278px);
+    }
+  }
+  .header__list--active {
+    display: flex;
+    align-items: flex-start;
+    z-index: 100;
   }
 }
 .friends {
@@ -816,7 +925,6 @@ body {
   .friends {
     padding: 7rem 0 1.6rem;
   }
-
   .friends__title {
     margin-bottom: 4rem;
   }
@@ -824,9 +932,7 @@ body {
   .slider__list {
     margin-bottom: 1rem;
   }
-
-  .slider__item--scarlett,
-.slider__item--freddie {
+  .slider__item--scarlett, .slider__item--freddie {
     display: none;
   }
 }
@@ -834,7 +940,6 @@ body {
   .friends {
     padding-top: 4rem;
   }
-
   .friends__title {
     margin-bottom: 5rem;
     font-size: 1.6em;
@@ -843,14 +948,10 @@ body {
   .slider {
     padding-bottom: 1.3rem;
   }
-
   .slider__list {
     margin-bottom: 0.1rem;
   }
-
-  .slider__item--sophia,
-.slider__item--jennifer,
-.slider__item--charly {
+  .slider__item--sophia, .slider__item--jennifer, .slider__item--charly {
     display: none;
   }
 }
@@ -941,18 +1042,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 3rem;
+  }
   .footer__wrapper {
     align-items: center;
     justify-content: center;
     column-gap: 5.6rem;
   }
-
-  .footer {
-    padding-top: 3rem;
-  }
-
-  .footer__contact,
-.footer__place {
+  .footer__contact, .footer__place {
     padding-top: 0;
     margin-bottom: 5.1rem;
   }
@@ -961,11 +1059,9 @@ body {
   .footer__title {
     text-align: center;
   }
-
   .footer__contact {
     margin-bottom: 3.1rem;
   }
-
   .footer__place {
     margin-bottom: 8.1rem;
   }

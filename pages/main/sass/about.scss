@@ -23,3 +23,41 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .about {
+    padding-bottom: 10.1rem;
+    &__right {
+      max-width: 440px;
+      margin-bottom: 8rem;
+    }
+    &__left {
+      order: 1;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .about {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+
+    &__right {
+      margin-bottom: 4.1rem;
+    }
+
+    &__title {
+      margin-bottom: 2.5rem;
+    }
+
+    &__text {
+      margin-bottom: 2.2rem;
+      padding: 0 15px;
+
+      text-align: justify;
+    }
+    &__img {
+      max-width: 260px;
+    }
+  }
+}
