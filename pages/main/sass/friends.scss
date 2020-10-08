@@ -43,6 +43,7 @@
   &__list {
     @include flex;
     column-gap: 90px;
+    padding-left: 0;
   }
 
   &__item {
@@ -154,7 +155,7 @@
   }
 
   .slider {
-    padding-bottom: 7.3rem;
+    padding-bottom: 7.2rem;
     margin-bottom: 4.2rem;
     &__wrap {
       flex-direction: column;
@@ -169,7 +170,7 @@
     }
 
     &__description {
-      padding: 0 13px 29px;
+      padding: 0 13px 30px;
     }
 
     &__btn {

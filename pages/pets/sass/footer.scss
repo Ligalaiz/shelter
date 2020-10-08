@@ -29,9 +29,8 @@
     padding-left: 60px;
   }
 
-  &__mail,
   &__boston {
-    margin-bottom: 4rem;
+    margin-bottom: 3.8rem;
   }
 
   &__mail {
@@ -54,9 +53,9 @@
     font-size: 2rem;
     font-family: $font-g;
     line-height: 1.15;
-    letter-spacing: 0.06rem;
     color: $color-primary;
-    letter-spacing: 0.13rem;
+    letter-spacing: 0.12rem;
+
     transition: all 0.2s linear;
     &:hover {
       color: $color-primary-light;
@@ -112,13 +111,23 @@
     &__contact,
     &__place {
       padding-top: 0;
-      margin-bottom: 5.1rem;
+      margin-bottom: 5.5rem;
+    }
+
+    &__place {
+      letter-spacing: 0.22rem;
+    }
+
+    &__boston,
+    &__london {
+      padding-left: 43px;
     }
   }
 }
 
 @media (max-width: 320px) {
   .footer {
+    padding-top: 3rem;
     &__title {
       text-align: center;
     }
@@ -129,6 +138,10 @@
 
     &__place {
       margin-bottom: 8.1rem;
+    }
+
+    &__img {
+      max-width: 260px;
     }
   }
 }

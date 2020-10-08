@@ -525,7 +525,7 @@ body {
   }
 }
 .header {
-  padding-top: 3rem;
+  padding-top: 6rem;
   background: url("../../assets/images/header/noise_transparent.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 .header__logo {
@@ -565,6 +565,7 @@ body {
   flex-wrap: nowrap;
   max-width: 443px;
   width: 100%;
+  padding-left: 0;
   padding-bottom: 2px;
 }
 .header__list li:last-child a {
@@ -589,7 +590,7 @@ body {
 .header__link::before {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 2.7px;
@@ -631,7 +632,7 @@ body {
   color: #ffffff;
 }
 .promo__text {
-  margin-bottom: 4rem;
+  margin-bottom: 4.1rem;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -658,6 +659,9 @@ body {
   }
   .header__list {
     padding-bottom: 3px;
+  }
+  .header__link::before {
+    bottom: -3px;
   }
 
   .promo {
@@ -707,17 +711,17 @@ body {
 
   .burger {
     width: 30px;
-    height: 22px;
+    height: 23px;
     transition: all 0.4s linear;
     z-index: 110;
   }
   .burger__item {
     position: absolute;
-    top: 50%;
+    top: 49%;
     width: 30px;
     height: 2px;
     background-color: #cdcdcd;
-    box-shadow: 0 9.1px 0 #cdcdcd, 0 -9.1px 0 #cdcdcd;
+    box-shadow: 0 10px 0 #cdcdcd, 0 -10px 0 #cdcdcd;
     transition: all 0.8s linear;
     transform: translateY(-50%);
   }
@@ -800,6 +804,10 @@ body {
   }
 }
 @media (max-width: 320px) {
+  .header__burger {
+    right: 5.3rem;
+  }
+
   .promo__right {
     padding-left: 3.9rem;
   }
@@ -872,6 +880,8 @@ body {
     margin-bottom: 4.1rem;
   }
   .about__title {
+    max-width: 250px;
+    margin: 0 auto;
     margin-bottom: 2.5rem;
   }
   .about__text {
@@ -928,6 +938,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 90px;
+  padding-left: 0;
 }
 .slider__item {
   display: flex;
@@ -1022,7 +1033,7 @@ body {
   }
 
   .slider {
-    padding-bottom: 7.3rem;
+    padding-bottom: 7.2rem;
     margin-bottom: 4.2rem;
   }
   .slider__wrap {
@@ -1035,7 +1046,7 @@ body {
     display: none;
   }
   .slider__description {
-    padding: 0 13px 29px;
+    padding: 0 13px 30px;
   }
   .slider__btn {
     position: absolute;
@@ -1051,7 +1062,7 @@ body {
   }
 }
 .help {
-  padding: 8rem 0 10rem;
+  padding: 8rem 0 3.5rem;
 }
 .help__title {
   max-width: 312px;
@@ -1071,16 +1082,18 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
-  column-gap: 6rem;
+  column-gap: 6.7rem;
   margin-bottom: 5.5rem;
+  padding-left: 0;
+  transform: translateX(-11px);
 }
 .help__item {
   position: relative;
   width: 166px;
+  margin-bottom: 5.5rem;
   padding-top: 90px;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
@@ -1100,8 +1113,14 @@ body {
   background-repeat: no-repeat;
   transform: translateX(-50%);
 }
+.help__item--food {
+  transform: translateX(5px);
+}
 .help__item--food::before {
   background-image: url("../../assets/images/help/icon-pet-food.svg");
+}
+.help__item--trans {
+  transform: translateX(8px);
 }
 .help__item--trans::before {
   background-image: url("../../assets/images/help/icon-transportation.svg");
@@ -1109,20 +1128,41 @@ body {
 .help__item--toy::before {
   background-image: url("../../assets/images/help/icon-toys.svg");
 }
+.help__item--bowl {
+  transform: translateX(-6px);
+}
 .help__item--bowl::before {
   background-image: url("../../assets/images/help/icon-bowls-and-cups.svg");
+}
+.help__item--soap {
+  transform: translateX(8px);
 }
 .help__item--soap::before {
   background-image: url("../../assets/images/help/icon-shampoos.svg");
 }
+.help__item--vit, .help__item--med, .help__item--color, .help__item--area {
+  margin-bottom: 1rem;
+}
+.help__item--vit {
+  transform: translateX(-24px);
+}
 .help__item--vit::before {
   background-image: url("../../assets/images/help/icon-vitamins.svg");
+}
+.help__item--med {
+  transform: translateX(-42px);
 }
 .help__item--med::before {
   background-image: url("../../assets/images/help/icon-medicines.svg");
 }
+.help__item--color {
+  transform: translateX(-22px);
+}
 .help__item--color::before {
   background-image: url("../../assets/images/help/icon-collars-leashes.svg");
+}
+.help__item--area {
+  transform: translateX(19px);
 }
 .help__item--area::before {
   background-image: url("../../assets/images/help/icon-sleeping-area.svg");
@@ -1135,13 +1175,11 @@ body {
   .help__list {
     margin-bottom: 4.5rem;
     column-gap: 6.4rem;
+    transform: none;
   }
   .help__item {
     margin-bottom: 5.5rem;
     transform: none;
-  }
-  .help__item--trans::before {
-    left: 43%;
   }
 }
 @media (max-width: 320px) {
@@ -1150,18 +1188,19 @@ body {
   }
   .help__title {
     max-width: 270px;
-    margin-bottom: 4.1rem;
+    margin-bottom: 4.2rem;
   }
   .help__list {
     padding-left: 0;
-    margin-bottom: 1.3rem;
-    column-gap: 2.9rem;
+    margin-bottom: 1.2rem;
+    column-gap: 3rem;
   }
   .help__item {
     width: 130px;
     padding-top: 71px;
     margin-bottom: 2.9rem;
     font-size: 1.5rem;
+    letter-spacing: 0.09rem;
   }
   .help__item::before {
     width: 50px;
@@ -1176,7 +1215,7 @@ body {
   }
 }
 .donation {
-  padding: 8rem 0 10.1rem;
+  padding: 8rem 0 9.9rem;
   background-color: #f6f6f6;
 }
 .donation__wrap {
@@ -1278,7 +1317,7 @@ body {
   .donation__subtitle {
     margin-bottom: 2.4rem;
     text-align: center;
-    letter-spacing: 0;
+    letter-spacing: 0.01rem;
   }
   .donation__tel {
     max-width: 282px;
@@ -1295,7 +1334,7 @@ body {
   }
 }
 .footer {
-  padding-top: 3.7rem;
+  padding-top: 4rem;
   background: url("../../assets/images/header/noise_transparent.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 .footer__wrapper {
@@ -1307,7 +1346,7 @@ body {
 }
 .footer__contact, .footer__place {
   max-width: 280px;
-  padding-top: 2rem;
+  padding-top: 1.7rem;
   padding-bottom: 15px;
 }
 .footer__place {
@@ -1395,6 +1434,7 @@ body {
   .footer__title {
     font-size: 3.5rem;
     text-align: center;
+    letter-spacing: 0.21rem;
   }
   .footer__contact {
     margin-bottom: 3.1rem;

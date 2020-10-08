@@ -1,5 +1,5 @@
 .header {
-  padding-top: 3rem;
+  padding-top: 6rem;
   background: url('../../assets/images/header/noise_transparent.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 
@@ -25,6 +25,7 @@
     @include flex($justify-content: space-between, $wrap: nowrap);
     max-width: 443px;
     width: 100%;
+    padding-left: 0;
     padding-bottom: 2px;
     & li:last-child a {
       margin-right: 0;
@@ -49,7 +50,7 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: -3px;
+      bottom: -2px;
       left: 0;
       width: 100%;
       height: 2.7px;
@@ -91,7 +92,7 @@
     color: $color-light-xl;
   }
   &__text {
-    margin-bottom: 4rem;
+    margin-bottom: 4.1rem;
 
     @include paragraph-l;
     color: $color-dark-s;
@@ -118,6 +119,10 @@
     }
     &__list {
       padding-bottom: 3px;
+    }
+
+    &__link::before {
+      bottom: -3px;
     }
   }
   .promo {
@@ -173,19 +178,19 @@
 
   .burger {
     width: 30px;
-    height: 22px;
+    height: 23px;
 
     transition: all 0.4s linear;
     z-index: 110;
     &__item {
       position: absolute;
-      top: 50%;
+      top: 49%;
 
       width: 30px;
       height: 2px;
 
       background-color: $color-dark-s;
-      box-shadow: 0 9.1px 0 $color-dark-s, 0 -9.1px 0 $color-dark-s;
+      box-shadow: 0 10px 0 $color-dark-s, 0 -10px 0 $color-dark-s;
 
       transition: all 0.8s linear;
       transform: translateY(-50%);
@@ -280,6 +285,11 @@
 }
 
 @media (max-width: 320px) {
+  .header {
+    &__burger {
+      right: 5.3rem;
+    }
+  }
   .promo {
     &__right {
       padding-left: 3.9rem;

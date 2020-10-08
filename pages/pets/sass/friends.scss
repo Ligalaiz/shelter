@@ -44,6 +44,7 @@
     @include flex;
     column-gap: 4rem;
     margin-bottom: 3rem;
+    padding-left: 0;
   }
 
   &__item {
@@ -172,9 +173,9 @@
 
 @media (max-width: 768px) {
   .friends {
-    padding: 7rem 0 1.6rem;
+    padding: 8rem 0 1.6rem;
     &__title {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
   }
   .slider {
@@ -191,21 +192,23 @@
 
 @media (max-width: 320px) {
   .friends {
-    padding-top: 4rem;
+    padding-top: 4.2rem;
+    padding-bottom: 2.9rem;
     &__title {
-      margin-bottom: 5rem;
+      margin-bottom: 4.2rem;
       font-size: 1.6em;
+      line-height: 1.37;
     }
   }
 
   .slider {
     padding-bottom: 1.3rem;
     &__list {
-      margin-bottom: 0.1rem;
+      margin-bottom: 1.2rem;
     }
 
     &__item--sophia,
-    &__item--jennifer,
+    &__item--timmy,
     &__item--charly {
       display: none;
     }

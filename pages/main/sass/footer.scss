@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 3.7rem;
+  padding-top: 4rem;
 
   background: url('../../assets/images/header/noise_transparent.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
@@ -11,7 +11,7 @@
   &__contact,
   &__place {
     max-width: 280px;
-    padding-top: 2rem;
+    padding-top: 1.7rem;
     padding-bottom: 15px;
   }
 
@@ -121,6 +121,7 @@
     &__title {
       font-size: 3.5rem;
       text-align: center;
+      letter-spacing: 0.21rem;
     }
 
     &__contact {

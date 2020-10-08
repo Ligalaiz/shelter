@@ -520,8 +520,6 @@ body {
 }
 .header {
   padding: 2.8rem 0 3.1rem;
-  position: sticky;
-  top: 0;
   background-color: #ffffff;
   z-index: 100;
 }
@@ -564,6 +562,7 @@ body {
   flex-wrap: nowrap;
   max-width: 443px;
   width: 100%;
+  padding-left: 0;
   padding-bottom: 2px;
 }
 .header__list li:last-child a {
@@ -589,7 +588,7 @@ body {
 .header__link::before {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -3px;
   left: 0;
   width: 100%;
   height: 2.7px;
@@ -604,6 +603,9 @@ body {
 .header__link--active::before {
   visibility: visible;
   transform: scaleX(1);
+}
+.header__burger {
+  display: none;
 }
 
 .promo {
@@ -660,32 +662,33 @@ body {
   .header__burger {
     position: absolute;
     display: block;
-    top: 5rem;
+    top: 4.9rem;
     right: 5rem;
   }
 
   .burger {
     width: 30px;
-    height: 22px;
+    height: 23px;
     transition: all 0.4s linear;
     z-index: 110;
   }
   .burger__item {
     position: absolute;
-    top: 50%;
+    top: 49%;
     width: 30px;
     height: 2px;
     background-color: #000000;
-    box-shadow: 0 9.1px 0 #000, 0 -9.1px 0 #000;
+    box-shadow: 0 10px 0 #000, 0 -10px 0 #000;
     transition: all 0.8s linear;
     transform: translateY(-50%);
   }
 
   .burger--active {
-    transform: rotate(90deg);
+    position: fixed;
     top: 5rem;
     right: 5rem;
     transition: all 0.4s linear;
+    transform: rotate(90deg);
   }
 
   .burger--active .burger__item {
@@ -705,7 +708,7 @@ body {
     display: none;
     width: 278px;
     min-width: 300px;
-    padding: 200px 10px 100px 70px;
+    padding: 200px 10px 75px 70px;
     justify-content: flex-start;
     flex-direction: column;
     height: 100vh;
@@ -803,6 +806,7 @@ body {
   flex-wrap: wrap;
   column-gap: 4rem;
   margin-bottom: 3rem;
+  padding-left: 0;
 }
 .slider__item {
   display: flex;
@@ -923,10 +927,10 @@ body {
 
 @media (max-width: 768px) {
   .friends {
-    padding: 7rem 0 1.6rem;
+    padding: 8rem 0 1.6rem;
   }
   .friends__title {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .slider__list {
@@ -938,20 +942,22 @@ body {
 }
 @media (max-width: 320px) {
   .friends {
-    padding-top: 4rem;
+    padding-top: 4.2rem;
+    padding-bottom: 2.9rem;
   }
   .friends__title {
-    margin-bottom: 5rem;
+    margin-bottom: 4.2rem;
     font-size: 1.6em;
+    line-height: 1.37;
   }
 
   .slider {
     padding-bottom: 1.3rem;
   }
   .slider__list {
-    margin-bottom: 0.1rem;
+    margin-bottom: 1.2rem;
   }
-  .slider__item--sophia, .slider__item--jennifer, .slider__item--charly {
+  .slider__item--sophia, .slider__item--timmy, .slider__item--charly {
     display: none;
   }
 }
@@ -984,8 +990,8 @@ body {
 .footer__mail, .footer__tel {
   padding-left: 60px;
 }
-.footer__mail, .footer__boston {
-  margin-bottom: 4rem;
+.footer__boston {
+  margin-bottom: 3.8rem;
 }
 .footer__mail {
   margin-bottom: 4.8rem;
@@ -999,9 +1005,8 @@ body {
   font-size: 2rem;
   font-family: "Georgia", sans-serif;
   line-height: 1.15;
-  letter-spacing: 0.06rem;
   color: #f1cdb3;
-  letter-spacing: 0.13rem;
+  letter-spacing: 0.12rem;
   transition: all 0.2s linear;
 }
 .footer__mail:hover, .footer__tel:hover, .footer__boston:hover, .footer__london:hover {
@@ -1052,10 +1057,19 @@ body {
   }
   .footer__contact, .footer__place {
     padding-top: 0;
-    margin-bottom: 5.1rem;
+    margin-bottom: 5.5rem;
+  }
+  .footer__place {
+    letter-spacing: 0.22rem;
+  }
+  .footer__boston, .footer__london {
+    padding-left: 43px;
   }
 }
 @media (max-width: 320px) {
+  .footer {
+    padding-top: 3rem;
+  }
   .footer__title {
     text-align: center;
   }
@@ -1064,6 +1078,9 @@ body {
   }
   .footer__place {
     margin-bottom: 8.1rem;
+  }
+  .footer__img {
+    max-width: 260px;
   }
 }
 
