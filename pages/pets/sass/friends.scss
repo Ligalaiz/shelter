@@ -1,0 +1,216 @@
+.friends {
+  padding: 8rem 0 4rem;
+
+  background-color: $color-light-l;
+
+  &__title {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+    text-align: center;
+  }
+
+  &__slider {
+    padding-bottom: 6rem;
+  }
+
+  &__btn {
+    max-width: 260px;
+    margin: 0 auto;
+    padding-left: 39px;
+    padding-right: 39px;
+
+    letter-spacing: 0.1rem;
+
+    background-color: $color-primary;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+      cursor: pointer;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+
+  &__wrap {
+    @include flex($justify-content: space-between, $wrap: nowrap);
+  }
+
+  &__list {
+    @include flex;
+    column-gap: 4rem;
+    margin-bottom: 3rem;
+    padding-left: 0;
+  }
+
+  &__item {
+    @include flex($direction: column);
+    max-width: 270px;
+    margin-bottom: 3rem;
+    border-radius: 9px;
+
+    text-align: center;
+
+    background-color: $color-light-s;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $color-light-xl;
+      box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+      cursor: pointer;
+    }
+  }
+
+  &__description {
+    padding: 0 35px 30px;
+  }
+
+  &__link {
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+      cursor: pointer;
+    }
+  }
+
+  &__img {
+    margin-bottom: 3rem;
+    & img {
+      border-radius: 9px 9px 0px 0px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 2.9rem;
+
+    font-size: 2rem;
+    font-family: $font-g;
+    line-height: 1.2;
+    letter-spacing: 0.12rem;
+    color: $color-dark-l;
+  }
+
+  &__btn {
+    position: relative;
+    @include flex($justify-content: center);
+    width: 52px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+
+    font-size: 2rem;
+    font-family: $font-g;
+
+    transition: all 0.2s linear;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+    &:active {
+      border-color: $color-primary;
+      background-color: $color-primary;
+    }
+    &--number {
+      border-color: $color-primary;
+      background-color: $color-primary;
+      cursor: default;
+      &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
+    }
+
+    &:disabled {
+      border-color: $color-dark-s;
+
+      color: $color-dark-s;
+
+      background-color: transparent;
+
+      cursor: default;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      font-size: 2rem;
+      line-height: 1;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &--dToLeft::before {
+      content: '<<';
+    }
+    &--toLeft::before {
+      content: '<';
+      width: 14px;
+    }
+    &--toRight::before {
+      content: '>';
+      width: 14px;
+    }
+    &--dToRight::before {
+      content: '>>';
+    }
+  }
+}
+
+.btn__wrap {
+  @include flex($justify-content: space-between);
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .friends {
+    padding: 8rem 0 1.6rem;
+    &__title {
+      margin-bottom: 3rem;
+    }
+  }
+  .slider {
+    &__list {
+      margin-bottom: 1rem;
+    }
+
+    &__item--scarlett,
+    &__item--freddie {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .friends {
+    padding-top: 4.2rem;
+    padding-bottom: 2.9rem;
+    &__title {
+      margin-bottom: 4.2rem;
+      font-size: 1.6em;
+      line-height: 1.37;
+    }
+  }
+
+  .slider {
+    padding-bottom: 1.3rem;
+    &__list {
+      margin-bottom: 1.2rem;
+    }
+
+    &__item--sophia,
+    &__item--timmy,
+    &__item--charly {
+      display: none;
+    }
+  }
+}

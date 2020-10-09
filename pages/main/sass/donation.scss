@@ -1,0 +1,122 @@
+.donation {
+  padding: 8rem 0 9.9rem;
+
+  background-color: $color-light-l;
+
+  &__wrap {
+    @include flex;
+  }
+  &__left {
+    margin-right: 30px;
+  }
+  &__right {
+    max-width: 380px;
+  }
+
+  &__title {
+    max-width: 300px;
+    margin-bottom: 2rem;
+
+    line-height: 1.32;
+  }
+
+  &__subtitle {
+    margin-bottom: 2rem;
+
+    @include h5;
+  }
+  &__tel {
+    position: relative;
+
+    display: block;
+    max-width: 349px;
+    margin-bottom: 2rem;
+    padding: 10px 14px 10px 60px;
+    border-radius: 9px;
+
+    @include h4;
+
+    background-color: $color-primary;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $color-primary-light;
+      cursor: pointer;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 50%;
+
+      width: 30px;
+      height: 23px;
+
+      background-repeat: no-repeat;
+      background-image: url('../../assets/images/donation/credit-card.svg');
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    @include paragraph-s;
+  }
+}
+
+@media (max-width: 768px) {
+  .donation {
+    padding-bottom: 10rem;
+    &__subtitle {
+      margin-bottom: 1.9rem;
+    }
+    &__left {
+      margin-right: 0;
+
+      order: 1;
+    }
+    &__right {
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .donation {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+
+    &__right {
+      margin-bottom: 4.2rem;
+    }
+
+    &__img {
+      max-width: 262px;
+    }
+
+    &__title {
+      margin-bottom: 2.2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2.4rem;
+      text-align: center;
+      letter-spacing: 0.01rem;
+    }
+
+    &__tel {
+      max-width: 282px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      padding-top: 13px;
+      padding-bottom: 13px;
+
+      font-size: 1.5rem;
+      letter-spacing: 0.09rem;
+    }
+    &__text {
+      padding: 0 10px;
+
+      text-align: justify;
+    }
+  }
+}

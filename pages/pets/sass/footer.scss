@@ -1,0 +1,147 @@
+.footer {
+  padding-top: 4rem;
+
+  background: url('../../assets/images/header/noise_transparent.png'),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+
+  &__wrapper {
+    @include flex($justify-content: space-between, $align-items: flex-start);
+  }
+  &__contact,
+  &__place {
+    max-width: 280px;
+    padding-top: 1.7rem;
+    padding-bottom: 15px;
+  }
+  &__place {
+    max-width: 301px;
+    & .footer__title {
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__title {
+    margin-bottom: 4.5rem;
+
+    color: $color-light-xl;
+  }
+  &__mail,
+  &__tel {
+    padding-left: 60px;
+  }
+
+  &__boston {
+    margin-bottom: 3.8rem;
+  }
+
+  &__mail {
+    margin-bottom: 4.8rem;
+  }
+
+  &__boston,
+  &__london {
+    padding-left: 40px;
+  }
+
+  &__mail,
+  &__tel,
+  &__boston,
+  &__london {
+    position: relative;
+
+    display: block;
+
+    font-size: 2rem;
+    font-family: $font-g;
+    line-height: 1.15;
+    color: $color-primary;
+    letter-spacing: 0.12rem;
+
+    transition: all 0.2s linear;
+    &:hover {
+      color: $color-primary-light;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      background-repeat: no-repeat;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__mail::before {
+    top: 43%;
+    width: 40px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-email.svg');
+  }
+  &__tel::before {
+    top: 46%;
+    width: 40px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-phone.svg');
+  }
+  &__boston::before {
+    left: -1px;
+    width: 22px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-marker.svg');
+  }
+  &__london::before {
+    left: -1px;
+    top: 47%;
+    width: 22px;
+    height: 32px;
+    background-image: url('../../assets/images/footer/icon-marker.svg');
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 3rem;
+    &__wrapper {
+      align-items: center;
+      justify-content: center;
+      column-gap: 5.6rem;
+    }
+
+    &__contact,
+    &__place {
+      padding-top: 0;
+      margin-bottom: 5.5rem;
+    }
+
+    &__place {
+      letter-spacing: 0.22rem;
+    }
+
+    &__boston,
+    &__london {
+      padding-left: 43px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    padding-top: 3rem;
+    &__title {
+      text-align: center;
+    }
+
+    &__contact {
+      margin-bottom: 3.1rem;
+    }
+
+    &__place {
+      margin-bottom: 8.1rem;
+    }
+
+    &__img {
+      max-width: 260px;
+    }
+  }
+}
