@@ -133,7 +133,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .slider {
     &__list {
       column-gap: 4rem;
@@ -145,7 +145,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .friends {
     padding-bottom: 4.2rem;
     padding-top: 4.2rem;

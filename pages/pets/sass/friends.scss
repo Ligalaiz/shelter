@@ -171,7 +171,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .friends {
     padding: 8rem 0 1.6rem;
     &__title {
@@ -190,7 +190,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .friends {
     padding-top: 4.2rem;
     padding-bottom: 2.9rem;
@@ -206,7 +206,12 @@
     &__list {
       margin-bottom: 1.2rem;
     }
+  }
+}
 
+@media (max-width: 639px) {
+
+  .slider {
     &__item--sophia,
     &__item--timmy,
     &__item--charly {

@@ -8,15 +8,18 @@
 
     text-align: center;
   }
+
   &__nav {
     @include flex($justify-content: space-between, $wrap: nowrap);
     margin-bottom: 6.1rem;
   }
+
   &__title {
     margin-bottom: 10px;
 
     @include logo_title;
   }
+
   &__subtitle {
     @include logo_subtitle;
   }
@@ -61,6 +64,7 @@
       transform: scaleX(0);
       visibility: hidden;
     }
+
     &--active {
       color: $color-light-s;
 
@@ -84,6 +88,7 @@
 
     transform: translateY(-40px);
   }
+
   &__title {
     max-width: 310px;
     margin-bottom: 4.2rem;
@@ -91,12 +96,14 @@
     @include h2;
     color: $color-light-xl;
   }
+
   &__text {
     margin-bottom: 4.1rem;
 
     @include paragraph-l;
     color: $color-dark-s;
   }
+
   &__btn {
     max-width: 207px;
 
@@ -110,7 +117,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .header {
     padding-top: 2.8rem;
 
@@ -125,6 +132,7 @@
       bottom: -3px;
     }
   }
+
   .promo {
     justify-content: center;
 
@@ -189,8 +197,8 @@
       width: 30px;
       height: 2px;
 
-      background-color: $color-dark-s;
-      box-shadow: 0 10px 0 $color-dark-s, 0 -10px 0 $color-dark-s;
+      background-color: $color-primary;
+      box-shadow: 0 10px 0 $color-primary, 0 -10px 0 $color-primary;
 
       transition: all 0.8s linear;
       transform: translateY(-50%);
@@ -260,6 +268,7 @@
     from {
       transform: translateX(278px);
     }
+
     to {
       transform: translateX(0);
     }
@@ -272,6 +281,7 @@
     from {
       transform: translateX(0);
     }
+
     to {
       transform: translateX(278px);
     }
@@ -284,27 +294,38 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .header {
     &__burger {
       right: 5.3rem;
     }
   }
+
   .promo {
     &__right {
       padding-left: 3.9rem;
     }
+
+    &__left {
+      align-items: center;
+    }
+
     &__title {
+      max-width: none;
+
       font-size: 2.5rem;
       text-align: center;
       letter-spacing: 1.5px;
     }
+
     &__text {
       text-align: center;
     }
+
     &__btn {
       margin-bottom: 9.5rem;
     }
+
     &__img {
       max-width: 262px;
     }

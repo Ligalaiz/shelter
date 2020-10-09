@@ -116,22 +116,44 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .help {
     padding-bottom: 0;
     &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 0;
       margin-bottom: 4.5rem;
-      column-gap: 6.4rem;
+
       transform: none;
     }
     &__item {
+      margin: 0 auto;
       margin-bottom: 5.5rem;
       transform: none;
     }
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 768px) and (max-width: 768px) {
+  .help {
+    &__item {
+      &--food,
+      &--bowl,
+      &--med {
+        transform: translateX(6px);
+      }
+
+      &--toy,
+      &--vit,
+      &--area {
+        transform: translateX(-6px);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
   .help {
     padding-top: 4.2rem;
     &__title {
@@ -142,7 +164,9 @@
       padding-left: 0;
       margin-bottom: 1.2rem;
 
-      column-gap: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
     }
     &__item {
       width: 130px;
@@ -160,9 +184,14 @@
       &--trans::before {
         left: 50%;
       }
-      &--area {
-        transform: translateX(-80px);
-      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .help {
+    &__list {
+      column-gap: 2.1rem;
     }
   }
 }

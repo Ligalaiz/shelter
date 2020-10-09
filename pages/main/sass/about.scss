@@ -24,20 +24,25 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .about {
     padding-bottom: 10.1rem;
     &__right {
       max-width: 440px;
       margin-bottom: 8rem;
     }
+  }
+}
+
+@media (max-width: 919px) {
+  .about {
     &__left {
       order: 1;
     }
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .about {
     padding-top: 4.2rem;
     padding-bottom: 4.2rem;
@@ -47,7 +52,7 @@
     }
 
     &__title {
-      max-width: 250px;
+      max-width: none;
       margin: 0 auto;
       margin-bottom: 2.5rem;
     }
@@ -60,6 +65,14 @@
     }
     &__img {
       max-width: 260px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .about {
+    &__title {
+      max-width: 250px;
     }
   }
 }
