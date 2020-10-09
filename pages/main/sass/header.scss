@@ -8,15 +8,27 @@
 
     text-align: center;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   &__nav {
     @include flex($justify-content: space-between, $wrap: nowrap);
     margin-bottom: 6.1rem;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   &__title {
     margin-bottom: 10px;
 
     @include logo_title;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   &__subtitle {
     @include logo_subtitle;
   }
@@ -61,6 +73,10 @@
       transform: scaleX(0);
       visibility: hidden;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
     &--active {
       color: $color-light-s;
 
@@ -84,6 +100,10 @@
 
     transform: translateY(-40px);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   &__title {
     max-width: 310px;
     margin-bottom: 4.2rem;
@@ -91,12 +111,20 @@
     @include h2;
     color: $color-light-xl;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   &__text {
     margin-bottom: 4.1rem;
 
     @include paragraph-l;
     color: $color-dark-s;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   &__btn {
     max-width: 207px;
 
@@ -110,7 +138,11 @@
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
+=======
+@media (max-width: 1279px) {
+>>>>>>> shelter-adaptive
   .header {
     padding-top: 2.8rem;
 
@@ -125,6 +157,10 @@
       bottom: -3px;
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   .promo {
     justify-content: center;
 
@@ -189,8 +225,13 @@
       width: 30px;
       height: 2px;
 
+<<<<<<< HEAD
       background-color: $color-dark-s;
       box-shadow: 0 10px 0 $color-dark-s, 0 -10px 0 $color-dark-s;
+=======
+      background-color: $color-primary;
+      box-shadow: 0 10px 0 $color-primary, 0 -10px 0 $color-primary;
+>>>>>>> shelter-adaptive
 
       transition: all 0.8s linear;
       transform: translateY(-50%);
@@ -260,6 +301,10 @@
     from {
       transform: translateX(278px);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
     to {
       transform: translateX(0);
     }
@@ -272,6 +317,10 @@
     from {
       transform: translateX(0);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
     to {
       transform: translateX(278px);
     }
@@ -284,27 +333,58 @@
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 320px) {
+=======
+@media (max-width: 767px) {
+>>>>>>> shelter-adaptive
   .header {
     &__burger {
       right: 5.3rem;
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> shelter-adaptive
   .promo {
     &__right {
       padding-left: 3.9rem;
     }
+<<<<<<< HEAD
     &__title {
+=======
+
+    &__left {
+      align-items: center;
+    }
+
+    &__title {
+      max-width: none;
+
+>>>>>>> shelter-adaptive
       font-size: 2.5rem;
       text-align: center;
       letter-spacing: 1.5px;
     }
+<<<<<<< HEAD
     &__text {
       text-align: center;
     }
     &__btn {
       margin-bottom: 9.5rem;
     }
+=======
+
+    &__text {
+      text-align: center;
+    }
+
+    &__btn {
+      margin-bottom: 9.5rem;
+    }
+
+>>>>>>> shelter-adaptive
     &__img {
       max-width: 262px;
     }

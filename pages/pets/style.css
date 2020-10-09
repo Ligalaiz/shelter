@@ -520,6 +520,8 @@ body {
 }
 .header {
   padding: 2.8rem 0 3.1rem;
+  position: sticky;
+  top: 0;
   background-color: #ffffff;
   z-index: 100;
 }
@@ -598,7 +600,7 @@ body {
   visibility: hidden;
 }
 .header__link--active {
-  color: #292929;
+  cursor: default;
 }
 .header__link--active::before {
   visibility: visible;
@@ -925,7 +927,7 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .friends {
     padding: 8rem 0 1.6rem;
   }
@@ -940,7 +942,7 @@ body {
     display: none;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .friends {
     padding-top: 4.2rem;
     padding-bottom: 2.9rem;
@@ -957,6 +959,8 @@ body {
   .slider__list {
     margin-bottom: 1.2rem;
   }
+}
+@media (max-width: 639px) {
   .slider__item--sophia, .slider__item--timmy, .slider__item--charly {
     display: none;
   }
@@ -1046,7 +1050,7 @@ body {
   background-image: url("../../assets/images/footer/icon-marker.svg");
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .footer {
     padding-top: 3rem;
   }
@@ -1066,9 +1070,12 @@ body {
     padding-left: 43px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 669px) {
   .footer {
     padding-top: 3rem;
+  }
+  .footer__wrapper {
+    align-items: flex-start;
   }
   .footer__title {
     text-align: center;
