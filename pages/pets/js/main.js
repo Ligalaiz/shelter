@@ -1,4 +1,5 @@
 import Menu from './Menu.js';
+import SmoothScroll from './SmoothScroll.js';
 
 const btn = document.getElementById('burger'),
   nav = document.getElementById('nav'),
@@ -18,3 +19,7 @@ activeMenuItem.addEventListener('click', () => menu.algoritmsForClose());
 document.addEventListener('keydown', (e) => {
   if (e.key == 'Escape') menu.algoritmsForClose();
 });
+
+// Smooth scroll to top
+const smoothScroll = new SmoothScroll(anchor, blockID);
+smoothScroll.showSmoothScroll();
