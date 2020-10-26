@@ -1,44 +1,21 @@
-class Menu {
-  ignitor() {
-    btn.classList.toggle('burger--active');
-  }
-  showMenu() {
-    nav.classList.add('nav-show');
-    overlay.classList.add('overlay--active');
-    nav.classList.add('header__list--active');
-    nav.classList.remove('nav-close');
-  }
-  closeMenu() {
-    nav.classList.remove('nav-show');
-    overlay.classList.remove('overlay--active');
-    nav.classList.add('nav-close');
-    nav.addEventListener(
-      'animationend',
-      () => {
-        nav.classList.remove('header__list--active');
-      },
-      { once: true }
-    );
-  }
-}
+import Menu from './Menu.js';
 
-let isEnabled = false;
 const btn = document.getElementById('burger'),
   nav = document.getElementById('nav'),
-  overlay = document.getElementById('overlay');
+  overlay = document.getElementById('overlay'),
+  activeMenuItem = document.querySelector('.header__link--active'),
+  logo = document.querySelector('.header__logo-link'),
+  body = document.querySelector('body'),
+  anchor = document.querySelector('a[href="#toTop"]'),
+  blockID = anchor.getAttribute('href');
 
-const menu = new Menu();
 
-btn.addEventListener('click', () => {
-  isEnabled = isEnabled ? false : true;
-  switch (isEnabled) {
-    case true:
-      menu.ignitor();
-      menu.showMenu();
-      break;
-    case false:
-      menu.closeMenu();
-      menu.ignitor();
-      break;
-  }
+  // Mobile menu
+const menu = new Menu(btn, nav, overlay, logo, body);
+
+btn.addEventListener('click', () => menu.algoritmsForBtn());
+overlay.addEventListener('click', () => menu.algoritmsForClose());
+activeMenuItem.addEventListener('click', () => menu.algoritmsForClose());
+document.addEventListener('keydown', (e) => {
+  if (e.key == 'Escape') menu.algoritmsForClose();
 });
