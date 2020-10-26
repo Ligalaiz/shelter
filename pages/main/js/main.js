@@ -19,3 +19,8 @@ activeMenuItem.addEventListener('click', () => menu.algoritmsForClose());
 document.addEventListener('keydown', (e) => {
   if (e.key == 'Escape') menu.algoritmsForClose();
 });
+
+// Smooth scroll to top
+const smoothScroll = new SmoothScroll(anchor, blockID);
+
+smoothScroll.showSmoothScroll();
