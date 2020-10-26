@@ -1,5 +1,6 @@
 import Menu from './Menu.js';
 import SmoothScroll from './SmoothScroll.js';
+import Slider from './Slider.js';
 
 const btn = document.getElementById('burger'),
   nav = document.getElementById('nav'),
@@ -23,3 +24,84 @@ document.addEventListener('keydown', (e) => {
 // Smooth scroll to top
 const smoothScroll = new SmoothScroll(anchor, blockID);
 smoothScroll.showSmoothScroll();
+
+// Slider
+const slides = document.querySelectorAll('.slider__item'),
+  prevBtn = document.querySelector('.slider__btn--toLeft'),
+  nextBtn = document.querySelector('.slider__btn--toRight'),
+  firstPage = document.querySelector('.slider__btn--dToLeft'),
+  lastPage = document.querySelector('.slider__btn--dToRight'),
+  pagesNumber = document.querySelector('.slider__btn--number'),
+  url =
+    'https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/markups/level-2/shelter/pets.json';
+
+const slider = new Slider(
+  slides,
+  pagesNumber,
+  prevBtn,
+  nextBtn,
+  firstPage,
+  lastPage
+);
+
+prevBtn.addEventListener('click', function () {
+  if (slider.isEnabled) {
+    setTimeout(slider.previousItem(slider.slideIndex), 200);
+  }
+});
+
+nextBtn.addEventListener('click', function () {
+  if (slider.isEnabled) {
+    setTimeout(slider.nextItem(slider.slideIndex), 200);
+  }
+});
+
+firstPage.addEventListener('click', function () {
+  if (slider.isEnabled) {
+    slider.pages = 2;
+    setTimeout(slider.previousItem(slider.slideIndex), 200);
+  }
+});
+
+lastPage.addEventListener('click', function () {
+  if (slider.isEnabled) {
+    if (window.matchMedia('(min-width: 1280px)').matches) {
+      slider.pages = 5;
+    } else if (window.matchMedia('(min-width: 767px)').matches) {
+      slider.pages = 7;
+    } else if (window.matchMedia('(min-width: 320px)').matches) {
+      slider.pages = 15;
+    }
+
+    setTimeout(slider.nextItem(slider.slideIndex), 200);
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function () {
+  slider.showPages();
+  slider.getData(url).then((data) => {
+    let count = slider.amountCardsOnSlide();
+    slider.initCards(data, count);
+
+    window.addEventListener('resize', () => {
+      count = slider.amountCardsOnSlide();
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].innerHTML = slider.appendCards(data, count);
+      }
+    });
+
+    function appendRandomSlides() {
+      data = data.sort(() => Math.random() - 0.5);
+      document.querySelector(
+        '.slider__item.changeSlides'
+      ).innerHTML = slider.appendCards(data, count);
+    }
+
+    prevBtn.addEventListener('click', function () {
+      appendRandomSlides();
+    });
+    nextBtn.addEventListener('click', function () {
+      appendRandomSlides();
+    });
+  });
+});
