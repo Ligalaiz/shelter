@@ -1,6 +1,7 @@
 import Menu from './Menu.js';
 import SmoothScroll from './SmoothScroll.js';
 import Slider from './Slider.js';
+import Popup from './Popup.js';
 
 const btn = document.getElementById('burger'),
   nav = document.getElementById('nav'),
