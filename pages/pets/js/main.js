@@ -105,3 +105,36 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Popup
+const popup = document.querySelector('.popup'),
+  closeBtn = popup.querySelector('.popup__close'),
+  list = document.querySelector('.slider__list'),
+  helpItemMenu = document.querySelector('.header__link--help'),
+  contactItemMenu = document.querySelector('.header__link--contacts');
+
+const popupPet = new Popup(popup, overlay, slider, url, body, closeBtn);
+
+list.addEventListener('click', function (e) {
+  e.preventDefault();
+  popupPet.addListener(e);
+});
+
+closeBtn.addEventListener('click', function () {
+  popupPet.closePopup();
+});
+
+overlay.addEventListener('click', function () {
+  popupPet.closePopup();
+});
+
+helpItemMenu.addEventListener('click', (e) => e.preventDefault());
+contactItemMenu.addEventListener('click', (e) => e.preventDefault());
+
+overlay.addEventListener('mouseover', function () {
+  popupPet.makeHoverBtn();
+});
+
+overlay.addEventListener('mouseout', function () {
+  popupPet.removeHoverBtn();
+});
