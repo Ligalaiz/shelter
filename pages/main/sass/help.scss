@@ -14,7 +14,7 @@
   }
 
   &__list {
-    @include flex;
+    @include flex($align-items: stretch);
     width: 100%;
     column-gap: 6.7rem;
     margin-bottom: 5.5rem;

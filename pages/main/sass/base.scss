@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+.body--overflow {
+  overflow: hidden;
+}
+
 $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
 
@@ -26,9 +30,10 @@ $font-a: 'Arial', sans-serif;
   $direction: row,
   $justify-content: center,
   $align-items: center,
-  $wrap: wrap
+  $wrap: wrap,
+  $display: flex
 ) {
-  display: flex;
+  display: $display;
   flex-direction: $direction;
   align-items: $align-items;
   justify-content: $justify-content;
@@ -121,6 +126,8 @@ $font-a: 'Arial', sans-serif;
 }
 
 .wrapper {
+  height: 100vh;
+
   @include paragraph-l;
 
   user-select: none;

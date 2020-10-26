@@ -8,29 +8,24 @@
 
     text-align: center;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   &__nav {
     @include flex($justify-content: space-between, $wrap: nowrap);
     margin-bottom: 6.1rem;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   &__title {
     margin-bottom: 10px;
 
     @include logo_title;
-  }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
+    transition: all 0.3s linear;
+  }
+
   &__subtitle {
     @include logo_subtitle;
+
+    transition: all 0.3s linear;
   }
 
   &__list {
@@ -41,6 +36,15 @@
     padding-bottom: 2px;
     & li:last-child a {
       margin-right: 0;
+    }
+  }
+
+  &__logo-link {
+    z-index: 500;
+    &--active {
+      position: fixed;
+      top: 2.8rem;
+      right: 124px;
     }
   }
 
@@ -73,13 +77,8 @@
       transform: scaleX(0);
       visibility: hidden;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
     &--active {
-      color: $color-light-s;
-
       cursor: default;
       &::before {
         visibility: visible;
@@ -100,10 +99,7 @@
 
     transform: translateY(-40px);
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   &__title {
     max-width: 310px;
     margin-bottom: 4.2rem;
@@ -111,20 +107,14 @@
     @include h2;
     color: $color-light-xl;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   &__text {
     margin-bottom: 4.1rem;
 
     @include paragraph-l;
     color: $color-dark-s;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   &__btn {
     max-width: 207px;
 
@@ -138,11 +128,21 @@
   }
 }
 
-<<<<<<< HEAD
-@media (max-width: 768px) {
-=======
+.overlay--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(41, 41, 41, 0.6);
+
+  z-index: 90;
+}
+
 @media (max-width: 1279px) {
->>>>>>> shelter-adaptive
   .header {
     padding-top: 2.8rem;
 
@@ -157,10 +157,7 @@
       bottom: -3px;
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   .promo {
     justify-content: center;
 
@@ -191,20 +188,6 @@
 }
 
 @media (max-width: 767px) {
-  .overlay--active {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    display: block;
-    width: 100vw;
-    height: 100vh;
-
-    background-color: rgba(0, 0, 0, 0.5);
-
-    z-index: 90;
-  }
-
   .header__burger {
     position: absolute;
     display: block;
@@ -225,13 +208,8 @@
       width: 30px;
       height: 2px;
 
-<<<<<<< HEAD
-      background-color: $color-dark-s;
-      box-shadow: 0 10px 0 $color-dark-s, 0 -10px 0 $color-dark-s;
-=======
       background-color: $color-primary;
       box-shadow: 0 10px 0 $color-primary, 0 -10px 0 $color-primary;
->>>>>>> shelter-adaptive
 
       transition: all 0.8s linear;
       transform: translateY(-50%);
@@ -258,38 +236,45 @@
     }
   }
 
-  .header__list {
-    position: fixed;
-    top: 0;
-    right: 0;
+  .header {
+    &__list {
+      position: fixed;
+      top: 0;
+      right: 0;
 
-    display: none;
+      display: none;
 
-    width: 278px;
-    min-width: 300px;
-    padding: 200px 10px 75px 70px;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 100vh;
-    background: url('../../assets/images/header/noise_transparent.png'),
-      radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
-  }
+      max-width: 320px;
 
-  .header__link {
-    margin-bottom: 1rem;
-
-    font-size: 24px;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: $color-dark-s;
-
-    &:hover {
-      color: $color-light-s;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      background: url('../../assets/images/header/noise_transparent.png'),
+        radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+        #211f20;
     }
 
-    &--active {
-      color: $color-light-s;
+    &__item {
+      margin-bottom: 2rem;
+    }
+
+    &__link {
+      margin-bottom: 1rem;
+
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: $color-dark-s;
+
+      &:hover {
+        color: $color-light-s;
+      }
+
+      &--active {
+        color: $color-light-s;
+      }
     }
   }
 
@@ -301,10 +286,7 @@
     from {
       transform: translateX(278px);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
     to {
       transform: translateX(0);
     }
@@ -317,10 +299,7 @@
     from {
       transform: translateX(0);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
     to {
       transform: translateX(278px);
     }
@@ -328,32 +307,21 @@
 
   .header__list--active {
     display: flex;
-    align-items: flex-start;
     z-index: 100;
   }
 }
 
-<<<<<<< HEAD
-@media (max-width: 320px) {
-=======
 @media (max-width: 767px) {
->>>>>>> shelter-adaptive
   .header {
     &__burger {
       right: 5.3rem;
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> shelter-adaptive
   .promo {
     &__right {
       padding-left: 3.9rem;
     }
-<<<<<<< HEAD
-    &__title {
-=======
 
     &__left {
       align-items: center;
@@ -362,19 +330,10 @@
     &__title {
       max-width: none;
 
->>>>>>> shelter-adaptive
       font-size: 2.5rem;
       text-align: center;
       letter-spacing: 1.5px;
     }
-<<<<<<< HEAD
-    &__text {
-      text-align: center;
-    }
-    &__btn {
-      margin-bottom: 9.5rem;
-    }
-=======
 
     &__text {
       text-align: center;
@@ -384,7 +343,6 @@
       margin-bottom: 9.5rem;
     }
 
->>>>>>> shelter-adaptive
     &__img {
       max-width: 262px;
     }

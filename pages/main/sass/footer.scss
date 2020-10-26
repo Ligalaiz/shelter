@@ -13,6 +13,9 @@
     padding-top: 1.7rem;
     padding-bottom: 15px;
   }
+  &__img {
+    align-items: flex-end;
+  }
   &__place {
     max-width: 301px;
     & .footer__title {
@@ -143,6 +146,7 @@
     &__place {
       margin-bottom: 8.1rem;
     }
+
     &__img {
       max-width: 260px;
     }
