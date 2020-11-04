@@ -607,6 +607,9 @@ body {
 .header__link:hover {
   color: #fafafa;
 }
+.header__link--help, .header__link--contacts {
+  pointer-events: none;
+}
 .header__link::before {
   content: "";
   position: absolute;
@@ -1578,6 +1581,14 @@ body {
   color: #b2b2b2;
 }
 
+@media (max-width: 974px) {
+  .donation__left {
+    order: 1;
+  }
+  .donation__right {
+    margin-bottom: 6rem;
+  }
+}
 @media (max-width: 768px) {
   .donation {
     padding-bottom: 10rem;
@@ -1587,10 +1598,6 @@ body {
   }
   .donation__left {
     margin-right: 0;
-    order: 1;
-  }
-  .donation__right {
-    margin-bottom: 6rem;
   }
 }
 @media (max-width: 320px) {

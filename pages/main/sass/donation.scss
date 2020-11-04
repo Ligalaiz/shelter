@@ -63,6 +63,17 @@
   }
 }
 
+@media (max-width: 974px) {
+  .donation {
+    &__left {
+      order: 1;
+    }
+    &__right {
+      margin-bottom: 6rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .donation {
     padding-bottom: 10rem;
@@ -71,11 +82,6 @@
     }
     &__left {
       margin-right: 0;
-
-      order: 1;
-    }
-    &__right {
-      margin-bottom: 6rem;
     }
   }
 }

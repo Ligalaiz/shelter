@@ -63,6 +63,11 @@
       color: $color-light-s;
     }
 
+    &--help,
+    &--contacts {
+      pointer-events:none;
+    }
+
     &::before {
       content: '';
       position: absolute;

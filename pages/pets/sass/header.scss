@@ -60,6 +60,12 @@
     &:hover {
       color: $color-dark-3xl;
     }
+
+    &--help,
+    &--contacts {
+      pointer-events: none;
+    }
+
     &::before {
       content: '';
       position: absolute;

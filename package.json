@@ -1,0 +1,17 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "task for Rsschool",
+  "main": "index.js",
+  "scripts": {
+    "s": "sass pages/main/sass/main.scss pages/main/style.css"
+  },
+  "keywords": [
+    "shelter"
+  ],
+  "author": "Ligalaiz",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.28.0"
+  }
+}

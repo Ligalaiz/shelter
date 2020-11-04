@@ -603,6 +603,9 @@ body {
 .header__link:hover {
   color: #292929;
 }
+.header__link--help, .header__link--contacts {
+  pointer-events: none;
+}
 .header__link::before {
   content: "";
   position: absolute;
